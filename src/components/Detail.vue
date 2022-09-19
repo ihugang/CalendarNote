@@ -1,28 +1,25 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-defineProps<{ day: number, weekend: Boolean }>();
+defineProps<{ day: number }>();
 
 const count = ref(0);
 </script>
-    
+        
 <template>
-    <div :class="{'cell':true,'red':weekend}">{{ day }}</div>
+    <div class="detail-cell">{{ day }}</div>
 </template>
-
+    
 <style>
-.cell {
+.detail-cell {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     width: 98%;
-    min-height: 100px;
+    min-height: 200px;
     background-color: rgb(186, 230, 252);
     cursor: pointer;
 }
-
-.red {
-    color: red;
-}
 </style>
+    
